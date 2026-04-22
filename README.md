@@ -1,12 +1,18 @@
 <img width="635" height="628" alt="image" src="https://github.com/user-attachments/assets/83f3a6c9-f841-4d04-b52e-f528de8f25e0" />
 
 <img width="452" height="325" alt="image" src="https://github.com/user-attachments/assets/54f02a96-4b9f-469b-95f9-cd73afaea202" />
-<img width="452" height="364" alt="image" src="https://github.com/user-attachments/assets/dadef309-c476-4d43-b7a4-1e738e6b32ae" />
+
 
 # UFC_STANCE_HANDEDNESS_AND_MYSELF
 UFC Stance Hand Dominance And Myself Analysis - Junior Project
 📋 Overview
+I am right-handed. But I fight southpaw.
 
+This is unusual. Only about 5% of UFC fighters share my stance-hand combination. For a long time, I wondered: 
+
+Am I at a real advantage, or am I just being different?
+
+So I decided to answer this question with 
 A comprehensive data analysis project exploring the impact of fighting stance (Orthodox vs Southpaw) on win rates in the UFC, with a special focus on right-handed southpaw fighters - an unconventional stance that represents my personal fighting style.
 
 This project combines statistical analysis, data visualization, and personal insights to answer the question: "Does my unorthodox stance give me an advantage in the octagon?"
@@ -63,23 +69,6 @@ NumPy: Numerical computations
 Matplotlib: Data visualization
 Seaborn: Statistical visualizations
 SciPy: Statistical testing
-📁 Project Structure
-
-text
-ufc-stance-analysis/
-│
-├── ufc_stance_analysis.py        # Main analysis script
-├── README.md                      # This file
-├── requirements.txt               # Python dependencies
-│
-├── outputs/
-│   ├── ufc_analysis_clean.png     # Main visualization
-│   └── ufc_comprehensive_analysis_report.txt  # Detailed report
-│
-└── data/
-    └── ufc_fighters.csv            # Dataset (optional - generates synthetic if missing)
-    
-🔍 Key Findings
 
 Stance alone rarely shows statistically significant differences
 Right-handed southpaws represent only ~5% of fighters
