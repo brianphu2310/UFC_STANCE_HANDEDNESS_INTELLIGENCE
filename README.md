@@ -2,7 +2,9 @@
 
 <img width="452" height="325" alt="image" src="https://github.com/user-attachments/assets/54f02a96-4b9f-469b-95f9-cd73afaea202" />
 
-<img width="772" height="608" alt="image" src="https://github.com/user-attachments/assets/2a9ccaeb-822c-4fb3-b699-7361ce2c5bdf" />
+
+<img width="754" height="604" alt="image" src="https://github.com/user-attachments/assets/4c4d8759-43e6-4317-b497-2144a1432792" />
+
 
 UFC STANCE HAND DOMINANCE AND MYSELF
 
@@ -96,7 +98,7 @@ As a right-handed southpaw fighter, this analysis helped me understand:
 
 Links
 
-- Tableau Dashboard: [public.tableau.com/app/profile/brian.ma5935/viz/UFCSTANCEANDHANDEDNESS/Dashboard2](https://public.tableau.com/app/profile/brian.ma5935/viz/UFCSTANCEANDHANDEDNESS/Dashboard2)
+- Tableau Dashboard: https://public.tableau.com/app/profile/brian.ma5935/viz/UFCRECOMENDATIONENGINE/Dashboard1
 - GitHub Repository: [github.com/brianphu2310/UFC_STANCE_HANDEDNESS
 ](https://github.com/brianphu2310/UFC_STANCE_HANDEDNESS)
 
