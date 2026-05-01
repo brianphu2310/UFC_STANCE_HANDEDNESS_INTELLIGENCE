@@ -56,6 +56,42 @@ Stored function `match_fighters()` with weighted scoring:
 | Weight class match | 60 points |
 
 Returns top 5 matching fighters with learning tips.
+### Stored Function: `match_fighters()`
+
+```sql
+CREATE OR REPLACE FUNCTION match_fighters(
+    p_stance VARCHAR,
+    p_handedness VARCHAR,
+    p_weight_class VARCHAR
+)
+RETURNS TABLE(
+    fighter_name VARCHAR,
+    similarity_score INTEGER,
+    stance_match BOOLEAN,
+    handedness_match BOOLEAN,
+    weight_match BOOLEAN,
+    win_rate DECIMAL,
+    learning_tip TEXT
+) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        f.fighter_name,
+        (CASE WHEN f.stance = p_stance THEN 20 ELSE 0 END +
+         CASE WHEN f.handedness = p_handedness THEN 20 ELSE 0 END +
+         CASE WHEN f.weight_class = p_weight_class THEN 60 ELSE 0 END)::INTEGER,
+        (f.stance = p_stance),
+        (f.handedness = p_handedness),
+        (f.weight_class = p_weight_class),
+        f.win_rate,
+        f.learning_tip
+    FROM fighters_male f
+    ORDER BY similarity_score DESC, win_rate DESC
+    LIMIT 5;
+END;
+$$ LANGUAGE plpgsql;
+ALL CODING IN POSTGRESQL:
+
 
 **Tableau Dashboard:** [Link]
 
