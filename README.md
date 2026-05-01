@@ -2,112 +2,82 @@
 
 <img width="452" height="325" alt="image" src="https://github.com/user-attachments/assets/54f02a96-4b9f-469b-95f9-cd73afaea202" />
 
-
 <img width="754" height="604" alt="image" src="https://github.com/user-attachments/assets/4c4d8759-43e6-4317-b497-2144a1432792" />
 
 
-UFC STANCE HAND DOMINANCE AND MYSELF
 
-UFC Stance Hand Dominance And Myself Analysis - Junior Project
+# UFC Stance Intelligence
 
-Overview
+**From personal question to practical tool.**
 
-I am right-handed. But I fight southpaw.
+I am right-handed. I fight southpaw. Only 5% of UFC fighters share my stance. Does this give me an advantage?
 
-This is unusual. Only about 5% of UFC fighters share my stance-hand combination. For a long time, I wondered: Am I at a real advantage, or am I just being different?
+This repository answers that question in three parts.
 
-So I decided to answer this question with a comprehensive data analysis project exploring the impact of fighting stance (Orthodox vs Southpaw) on win rates in the UFC, with a special focus on right-handed southpaw fighters - an unconventional stance that represents my personal fighting style.
+---
 
-This project combines statistical analysis, data visualization, and personal insights to answer the question: "Does my unorthodox stance give me an advantage in the octagon?"
+## Repository Structure
 
-Key Features
+| Folder | Content |
+|--------|---------|
+| `1-analysis/` | Statistical analysis (Python, Excel, Tableau) |
+| `2-matchmaker/` | PostgreSQL stored function + Tableau dashboard |
+| `3-streamlit-app/` | Interactive web app (Streamlit, Scikit-learn) |
 
-- Dual Analysis Approach: Combines general UFC statistics with personalized insights
-- Hand Dominance Simulation: Models real-world hand dominance patterns (95% Orthodox are right-handed, 85% Southpaw are left-handed)
-- 4 Detailed Groups: Breaks down fighters by stance AND hand dominance
-- UFC-Style Visualizations: Professional, dark-themed charts with UFC color palette
-- Statistical Testing: T-tests to determine significance of differences
-- Personal Focus: Special emphasis on right-handed southpaw fighters
+---
 
-What the Analysis Covers
+## Part 1: Statistical Analysis
 
-General Statistics:
-- Win rate distribution by stance (Orthodox vs Southpaw)
-- Mean, median, and standard deviation comparisons
-- Frequency distributions and density plots
+**Tech:** Python (Pandas, SciPy), Excel, Tableau
 
-Detailed Group Analysis:
-- Group 1: Orthodox + Right-handed
-- Group 2: Orthodox + Left-handed
-- Group 3: Southpaw + Left-handed (traditional southpaws)
-- Group 4: Southpaw + Right-handed (my group)
+- Analyzed 117 UFC fighters across 4 stance-hand groups
+- T-test: Southpaw has +5.2% higher win rate (p < 0.05)
+- My group (Right-handed Southpaw): 77.92% win rate
+- Only 5% of fighters share my stance
 
-Personal Insights:
-- How right-handed southpaws compare to other groups
-- Success metrics within my group
-- Advantages and challenges of this unconventional stance
-- Famous fighters to study (Conor McGregor, Israel Adesanya, Dustin Poirier)
+**Tableau Dashboard:** [Link]
 
-Visualizations
+---
 
-The project generates 12 professional charts including:
-- Box plots showing win rate distributions
-- Violin plots for density analysis
-- Histograms for frequency distributions
-- Bar charts with error bars
-- Donut charts for group composition
-- Statistical test result displays
-- Personal insight panels
+## Part 2: Fighter Matchmaker
 
-Statistical Methods
+**Tech:** PostgreSQL, Tableau
 
-- T-tests for comparing group means
-- Descriptive statistics (mean, median, std, quartiles)
-- Significance testing at alpha = 0.05
-- Skewness analysis for distribution shapes
+Stored function `match_fighters()` with weighted scoring:
 
-Technologies Used
+| Factor | Weight |
+|--------|--------|
+| Stance match | 20 points |
+| Handedness match | 20 points |
+| Weight class match | 60 points |
 
-- Python 3.8+: Core programming language
-- Pandas: Data manipulation and analysis
-- NumPy: Numerical computations
-- Matplotlib: Data visualization
-- Seaborn: Statistical visualizations
-- SciPy: Statistical testing
-- Tableau: Interactive dashboard
+Returns top 5 matching fighters with learning tips.
 
-Key Findings
+**Tableau Dashboard:** [Link]
 
-- Stance alone rarely shows statistically significant differences
-- Right-handed southpaws represent only about 5% of fighters
-- Success depends more on individual skill than stance
-- Unconventional stances can be advantageous due to opponent unfamiliarity
+---
 
-Personal Takeaway
+## Part 3: Streamlit Web App
 
-As a right-handed southpaw fighter, this analysis helped me understand:
+**Tech:** Python, Streamlit, Scikit-learn, Plotly
 
-- My stance is rare but not inherently advantageous
-- Success comes from mastering my unique style
-- Studying other successful right-handed southpaws is valuable
-- The data doesn't define me - my training and dedication do
+User inputs: height, weight, reach, stance, handedness
 
-Links
+Returns:
+- Predicted win rate vs my profile
+- Top 5 fighter twins with similarity score
+- Personalized study lessons
 
-- Tableau Dashboard: https://public.tableau.com/app/profile/brian.ma5935/viz/UFCRECOMENDATIONENGINE/Dashboard1
-- GitHub Repository: [github.com/brianphu2310/UFC_STANCE_HANDEDNESS
-](https://github.com/brianphu2310/UFC_STANCE_HANDEDNESS)
+**Live Demo:** [Link]
 
-Contact
+---
 
-Author: Brian Phu
-Email: brianphu2310@gmail.com
-GitHub: brianphu2310
+## Run Locally
 
-Acknowledgments
-
-UFC for providing the sport that inspired this analysis
-The data science community for amazing tools and libraries
-Fellow fighters who share their experiences and insights
+```bash
+git clone https://github.com/brianphu2310/ufc-stance-intelligence.git
+cd ufc-stance-intelligence/3-streamlit-app
+pip install -r requirements.txt
+streamlit run app.py
 
 
