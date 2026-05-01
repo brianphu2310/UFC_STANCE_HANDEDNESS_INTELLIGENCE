@@ -7,7 +7,8 @@
 
 <img width="754" height="604" alt="image" src="https://github.com/user-attachments/assets/4c4d8759-43e6-4317-b497-2144a1432792" />
 
-<img width="1365" height="856" alt="image" src="https://github.com/user-attachments/assets/039bc8bc-1b59-4529-b7bf-ed708a3cb704" />
+<img width="1512" height="798" alt="image" src="https://github.com/user-attachments/assets/adb41316-043f-4100-b2da-92cdc3b5f780" />
+
 
 # UFC Stance Intelligence
 
